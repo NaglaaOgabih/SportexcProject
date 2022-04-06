@@ -49,7 +49,7 @@ class SubscriptionViewController: UIViewController {
     var statusArray : [Status]?
     var currentSubsBtn = true
     var previousSubsBtn = false
-    var currentSubscriptions : [Subscription] = []
+    var currentSubscriptions : [Subscription]?
     var lastSubscriptions : [Subscription] = []
     var determineCell = "current"
     override func viewDidLoad() {
@@ -60,7 +60,14 @@ class SubscriptionViewController: UIViewController {
         dataTableView.separatorStyle = .none
         currentSubscriptionsApi()
         previousSubscriptionBtn.titleLabel?.textColor = .black
+        navigationItem.title = "Child Subscriptions"
+        let textAttributes = [NSAttributedString.Key.foregroundColor:UIColor.white]
+        navigationController?.navigationBar.titleTextAttributes = textAttributes
 
+        let backButton = UIBarButtonItem()
+        backButton.image = UIImage(systemName: "chevron.backward")
+        navigationItem.leftBarButtonItem = backButton
+        
 
     }
     @IBAction func currentSubscriptionBtnPressed(_ sender: Any) {
@@ -105,11 +112,12 @@ class SubscriptionViewController: UIViewController {
                 do {
                     let cardDataDecoded = try decoder.decode(StatusModel.self, from: data)
                     self.statusArray = cardDataDecoded.status
+                    
                     cancelledLabel.text = statusArray?[0].statusName
                     existingProgram.text = statusArray?[1].statusName
                     waitingLabel.text = statusArray?[2].statusName
                     waitingPaymentLabel.text = statusArray?[3].statusName
-                    greenView.layer.backgroundColor = hexStringToUIColor(hex: (statusArray?[1].statusColor!)!).cgColor
+                    greenView.layer.backgroundColor = hexStringToUIColor(hex: statusArray?[1].statusColor ?? "#FFC900").cgColor
                     yellowView.layer.backgroundColor = hexStringToUIColor(hex: statusArray?[3].statusColor ?? "#FFC900").cgColor
                     redView.layer.backgroundColor = hexStringToUIColor(hex: statusArray?[0].statusColor ?? "#E91B33").cgColor
                     blueView.layer.backgroundColor = hexStringToUIColor(hex: statusArray?[2].statusColor ?? "#18ACE7").cgColor
@@ -138,7 +146,7 @@ class SubscriptionViewController: UIViewController {
                         self.dataTableView.reloadData()
                     }
                 } catch{
-                    print(error.localizedDescription)
+                    print(error)
                 }
             }
         }
@@ -157,7 +165,7 @@ class SubscriptionViewController: UIViewController {
             if let data = data {
                 do {
                     let lastSubscriptionsDataDecoded = try decoder.decode(CurrentSubscriptionsModel.self, from: data)
-                    self.lastSubscriptions = lastSubscriptionsDataDecoded.subscription
+                    self.lastSubscriptions = lastSubscriptionsDataDecoded.subscription ?? []
 //                    print(self.lastSubscriptions.count)
                     DispatchQueue.main.async {
                         self.dataTableView.reloadData()

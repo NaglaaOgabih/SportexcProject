@@ -17,23 +17,23 @@ import Foundation
 
 // MARK: - CurrentSubscriptionsModel
 struct CurrentSubscriptionsModel: Codable {
-    let subscription: [Subscription]
-    let success: Int
+    let subscription: [Subscription]?
+    let success: Int?
 }
 
 // MARK: - Subscription
 struct Subscription: Codable {
-    let subscriptionID, childID, sportID, sportName: String
-    let branchID, branchName, ageGroupID, ageGroup: String
-    let periodID, period, trainingTimingID: String
-    let trainingTiming: [String]
+    let subscriptionID, childID, sportID, sportName: String?
+    let branchID, branchName, ageGroupID, ageGroup: String?
+    let periodID, period, trainingTimingID: String?
+    let trainingTiming: [String]?
     let suitID: String?
-    let suit, suitQuantity: [String]
-    let statusID, statusName, statusColor, price: String
-    let deliveryStatus, addressID: String
+    let suit, suitQuantity: [String]?
+    let statusID, statusName, statusColor, price: String?
+    let deliveryStatus, addressID: String?
     let addressDetails: AddressDetails?
-    let startDate, date, classNumber, classRemain: String
-    let child: Child
+    let startDate, date, classNumber, classRemain: String?
+    let child: Child?
 
     enum CodingKeys: String, CodingKey {
         case subscriptionID = "subscription_id"
