@@ -20,8 +20,18 @@ class ChildAddDataViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         createDataPicker()
+        navigationItem.title = "Add a child"
+        let textAttributes = [NSAttributedString.Key.foregroundColor:UIColor.white]
+        navigationController?.navigationBar.titleTextAttributes = textAttributes
+
+        let backButton = UIBarButtonItem()
+        backButton.image = UIImage(systemName: "chevron.backward")
+        navigationItem.leftBarButtonItem = backButton
+        
+    
     }
     @IBAction func addBtnPressed(_ sender: Any) {
+        
         childDataApi()
     }
     @IBAction func personalCardImgPressed(_ sender: Any) {
@@ -76,8 +86,8 @@ class ChildAddDataViewController: UIViewController {
             "id_no" : "50000",
             "birthdate" : "1996-09-28",
             "child_gender" : "female",
-            "image" : "",
-            "image_id" : "",
+//            "image" : "",
+//            "image_id" : "",
             "child_diseases" : "1",
             "child_diseases_details" : "heartattach",
             "vaccination" : "0",

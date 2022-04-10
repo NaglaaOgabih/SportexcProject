@@ -476,7 +476,14 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="900"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="aPS-nI-WrD">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="navbarPic" translatesAutoresizingMaskIntoConstraints="NO" id="meq-SR-OJC">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="100"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="100" id="o9O-42-vLD"/>
+                                </constraints>
+                                <preferredSymbolConfiguration key="preferredSymbolConfiguration" scale="default"/>
+                            </imageView>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsVerticalScrollIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aPS-nI-WrD">
                                 <rect key="frame" x="0.0" y="100" width="414" height="800"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Wcw-j0-1B6">
@@ -794,13 +801,6 @@
                                     <constraint firstAttribute="trailing" secondItem="Wcw-j0-1B6" secondAttribute="trailing" id="vBQ-OW-QK7"/>
                                 </constraints>
                             </scrollView>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="navbarPic" translatesAutoresizingMaskIntoConstraints="NO" id="meq-SR-OJC">
-                                <rect key="frame" x="0.0" y="0.0" width="414" height="100"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="100" id="o9O-42-vLD"/>
-                                </constraints>
-                                <preferredSymbolConfiguration key="preferredSymbolConfiguration" scale="default"/>
-                            </imageView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="VHw-8C-Nie"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -823,7 +823,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Wak-E5-WSV" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1140.5797101449277" y="1020.5357142857142"/>
+            <point key="canvasLocation" x="1223" y="932"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="QJi-9j-mpw">
