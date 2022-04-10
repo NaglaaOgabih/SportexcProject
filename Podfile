@@ -8,7 +8,6 @@ target 'SportexcProject' do
   # Pods for SportexcProject
   pod 'Alamofire'
 
-
   target 'SportexcProjectTests' do
     inherit! :search_paths
     # Pods for testing
