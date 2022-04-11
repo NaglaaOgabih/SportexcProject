@@ -15,8 +15,23 @@ class ChildAddDataViewController: UIViewController {
     var imageId : Int?
     var selectedPresonalCardImg : UIImage?
     var selectedPresonalImg : UIImage?
+    @IBOutlet weak var healthProblemYesBtn: UIButton!
+    @IBOutlet weak var healthProblemNoBtn: UIButton!
+    @IBOutlet weak var vaccinationYesBtn: UIButton!
+    @IBOutlet weak var vaccinationNoBtn: UIButton!
+    @IBOutlet weak var healthProblemTxtField: UITextField!
+    @IBOutlet weak var vaccinationTxtField: UITextField!
+    @IBOutlet weak var healthProplemView: UIView!
 
-
+    @IBOutlet weak var vaccinationView: UIView!
+    @IBOutlet weak var healthProblemYesImg: UIImageView!
+    
+    @IBOutlet weak var healthProblemNoImg: UIImageView!
+    
+    @IBOutlet weak var vaccinationYesImg: UIImageView!
+    
+    @IBOutlet weak var vaccinationNoImg: UIImageView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         createDataPicker()
@@ -31,7 +46,6 @@ class ChildAddDataViewController: UIViewController {
     
     }
     @IBAction func addBtnPressed(_ sender: Any) {
-        
         childDataApi()
     }
     @IBAction func personalCardImgPressed(_ sender: Any) {
@@ -51,6 +65,32 @@ class ChildAddDataViewController: UIViewController {
         vc.delegate = self
         vc.allowsEditing = true
         present(vc, animated: true)
+    }
+    
+    @IBAction func healthProblemYesBtnPressed(_ sender: Any) {
+        healthProblemYesImg.image = UIImage(named: "dot-circle")
+        healthProblemNoImg.image = UIImage(named: "circle")
+        healthProplemView.isHidden = false
+
+    }
+    
+    @IBAction func healthProblemNoBtnPressed(_ sender: Any) {
+        
+        healthProblemNoImg.image = UIImage(named: "dot-circle")
+        healthProblemYesImg.image = UIImage(named: "circle")
+        healthProplemView.isHidden = true
+    }
+    
+    @IBAction func vaccinationYesBtnPressed(_ sender: Any) {
+        vaccinationYesImg.image = UIImage(named:"dot-circle")
+        vaccinationNoImg.image = UIImage(named: "circle")
+        vaccinationView.isHidden = false
+    }
+    @IBAction func vaccinationNoBtnPressed(_ sender: Any) {
+        vaccinationYesImg.image = UIImage(named:"circle")
+        vaccinationNoImg.image = UIImage(named: "dot-circle")
+        vaccinationView.isHidden = true
+
     }
     
     func createDataPicker(){
@@ -86,8 +126,8 @@ class ChildAddDataViewController: UIViewController {
             "id_no" : "50000",
             "birthdate" : "1996-09-28",
             "child_gender" : "female",
-//            "image" : "",
-//            "image_id" : "",
+            "image" : "",
+            "image_id" : "",
             "child_diseases" : "1",
             "child_diseases_details" : "heartattach",
             "vaccination" : "0",
@@ -110,8 +150,11 @@ class ChildAddDataViewController: UIViewController {
             .responseJSON { response in
                 switch response.result {
                 case .success(let value):
+                    print("success")
+                    print(response)
                     print(value)
                 case .failure(let error):
+                    print("fail")
                     print(error.localizedDescription)
                 }
             }
