@@ -1,0 +1,177 @@
+
+/* Class = "UIButton"; normalTitle = "Button"; ObjectID = "0IO-pH-z2u"; */
+"0IO-pH-z2u.normalTitle" = "Button";
+
+/* Class = "UIButton"; configuration.title = "View Tables"; ObjectID = "0VE-rh-LIT"; */
+"0VE-rh-LIT.configuration.title" = "View Tables";
+
+/* Class = "UIButton"; normalTitle = "Button"; ObjectID = "0VE-rh-LIT"; */
+"0VE-rh-LIT.normalTitle" = "Button";
+
+/* Class = "UILabel"; text = "Vaccination Status"; ObjectID = "1tL-9u-XiE"; */
+"1tL-9u-XiE.text" = "Vaccination Status";
+
+/* Class = "UILabel"; text = "Phone Number"; ObjectID = "5Xe-Gz-CZL"; */
+"5Xe-Gz-CZL.text" = "Phone Number";
+
+/* Class = "UILabel"; text = "Cancelled Label"; ObjectID = "6FA-Po-8Hz"; */
+"6FA-Po-8Hz.text" = "Cancelled Label";
+
+/* Class = "UILabel"; text = "Add a personal card image"; ObjectID = "7a7-Cx-utI"; */
+"7a7-Cx-utI.text" = "Add a personal card image";
+
+/* Class = "UILabel"; text = "Sara"; ObjectID = "8Xu-fg-Zcr"; */
+"8Xu-fg-Zcr.text" = "Sara";
+
+/* Class = "UILabel"; text = "Name        :"; ObjectID = "Chm-Bu-IbS"; */
+"Chm-Bu-IbS.text" = "Name        :";
+
+/* Class = "UIButton"; configuration.title = "Tweets"; ObjectID = "FfZ-1c-00q"; */
+"FfZ-1c-00q.configuration.title" = "Tweets";
+
+/* Class = "UIButton"; normalTitle = "Button"; ObjectID = "FfZ-1c-00q"; */
+"FfZ-1c-00q.normalTitle" = "Button";
+
+/* Class = "UIButton"; normalTitle = "Button"; ObjectID = "G85-ei-4ym"; */
+"G85-ei-4ym.normalTitle" = "Button";
+
+/* Class = "UIButton"; normalTitle = "Button"; ObjectID = "GPg-ge-1Gu"; */
+"GPg-ge-1Gu.normalTitle" = "Button";
+
+/* Class = "UILabel"; text = "Yes"; ObjectID = "GRW-up-6JN"; */
+"GRW-up-6JN.text" = "Yes";
+
+/* Class = "UILabel"; text = "Birthdate :"; ObjectID = "GsS-XY-YCt"; */
+"GsS-XY-YCt.text" = "Birthdate :";
+
+/* Class = "UITextField"; placeholder = "Mention It"; ObjectID = "HTv-We-pWc"; */
+"HTv-We-pWc.placeholder" = "Mention It";
+
+/* Class = "UILabel"; text = "5/5/2010"; ObjectID = "IYe-WL-Dax"; */
+"IYe-WL-Dax.text" = "5/5/2010";
+
+/* Class = "UILabel"; text = "Add Child"; ObjectID = "JDz-Ex-Pfg"; */
+"JDz-Ex-Pfg.text" = "Add Child";
+
+/* Class = "UILabel"; text = "13 years"; ObjectID = "Mfz-CO-iQs"; */
+"Mfz-CO-iQs.text" = "13 years";
+
+/* Class = "UILabel"; text = "12 hours ago"; ObjectID = "Mya-ex-HZ5"; */
+"Mya-ex-HZ5.text" = "12 hours ago";
+
+/* Class = "UILabel"; text = "Age            :"; ObjectID = "QOL-75-Snw"; */
+"QOL-75-Snw.text" = "Age            :";
+
+/* Class = "UILabel"; text = "Subscription date:"; ObjectID = "SIH-NC-vdo"; */
+"SIH-NC-vdo.text" = "Subscription date:";
+
+/* Class = "UILabel"; text = "Class Remain:"; ObjectID = "W0S-3P-eS3"; */
+"W0S-3P-eS3.text" = "Class Remain:";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "WWo-k0-pah"; */
+"WWo-k0-pah.text" = "Label";
+
+/* Class = "UIButton"; normalTitle = "Button"; ObjectID = "Wtv-9G-nS9"; */
+"Wtv-9G-nS9.normalTitle" = "Button";
+
+/* Class = "UILabel"; text = "No"; ObjectID = "Wwh-9n-VAm"; */
+"Wwh-9n-VAm.text" = "No";
+
+/* Class = "UIButton"; normalTitle = "Button"; ObjectID = "X3d-71-6DT"; */
+"X3d-71-6DT.normalTitle" = "Button";
+
+/* Class = "UILabel"; text = "15"; ObjectID = "YlS-aX-Ccf"; */
+"YlS-aX-Ccf.text" = "15";
+
+/* Class = "UIButton"; normalTitle = "Button"; ObjectID = "Z9X-zY-i3x"; */
+"Z9X-zY-i3x.normalTitle" = "Button";
+
+/* Class = "UIButton"; configuration.title = "News"; ObjectID = "ZRm-83-ww2"; */
+"ZRm-83-ww2.configuration.title" = "News";
+
+/* Class = "UIButton"; normalTitle = "Button"; ObjectID = "ZRm-83-ww2"; */
+"ZRm-83-ww2.normalTitle" = "Button";
+
+/* Class = "UILabel"; text = "No"; ObjectID = "bLV-kS-1pE"; */
+"bLV-kS-1pE.text" = "No";
+
+/* Class = "UILabel"; text = "Basketball team meeting"; ObjectID = "c1E-nM-UXm"; */
+"c1E-nM-UXm.text" = "Basketball team meeting";
+
+/* Class = "UILabel"; text = "8"; ObjectID = "dRs-Cx-Tq2"; */
+"dRs-Cx-Tq2.text" = "8";
+
+/* Class = "UIButton"; configuration.title = "Videos"; ObjectID = "djZ-wN-MGh"; */
+"djZ-wN-MGh.configuration.title" = "Videos";
+
+/* Class = "UIButton"; normalTitle = "Button"; ObjectID = "djZ-wN-MGh"; */
+"djZ-wN-MGh.normalTitle" = "Button";
+
+/* Class = "UILabel"; text = "Birthdate"; ObjectID = "ebT-LV-co2"; */
+"ebT-LV-co2.text" = "Birthdate";
+
+/* Class = "UILabel"; text = "Class Number:"; ObjectID = "f9S-Pc-v3q"; */
+"f9S-Pc-v3q.text" = "Class Number:";
+
+/* Class = "UITextField"; placeholder = "How many doses?"; ObjectID = "flC-5a-XTb"; */
+"flC-5a-XTb.placeholder" = "How many doses?";
+
+/* Class = "UIButton"; normalTitle = "Button"; ObjectID = "fzq-Fb-h3g"; */
+"fzq-Fb-h3g.normalTitle" = "Button";
+
+/* Class = "UILabel"; text = "Waiting Label"; ObjectID = "grc-7S-Ptj"; */
+"grc-7S-Ptj.text" = "Waiting Label";
+
+/* Class = "UIButton"; normalTitle = "Button"; ObjectID = "hdm-3q-4lA"; */
+"hdm-3q-4lA.normalTitle" = "Button";
+
+/* Class = "UIButton"; configuration.title = "Add"; ObjectID = "iz5-5Y-qxN"; */
+"iz5-5Y-qxN.configuration.title" = "Add";
+
+/* Class = "UIButton"; normalTitle = "Button"; ObjectID = "iz5-5Y-qxN"; */
+"iz5-5Y-qxN.normalTitle" = "Button";
+
+/* Class = "UIButton"; configuration.title = "Last Subscriptions"; ObjectID = "l3w-Pp-3dq"; */
+"l3w-Pp-3dq.configuration.title" = "Last Subscriptions";
+
+/* Class = "UIButton"; normalTitle = "Button"; ObjectID = "l3w-Pp-3dq"; */
+"l3w-Pp-3dq.normalTitle" = "Button";
+
+/* Class = "UILabel"; text = "Does the child suffer from any health problems?"; ObjectID = "m1c-dL-H1r"; */
+"m1c-dL-H1r.text" = "Does the child suffer from any health problems?";
+
+/* Class = "UILabel"; text = "Waiting Payment Label"; ObjectID = "mAo-6L-bAx"; */
+"mAo-6L-bAx.text" = "Waiting Payment Label";
+
+/* Class = "UIButton"; configuration.title = "Pictures"; ObjectID = "qyk-b9-9vp"; */
+"qyk-b9-9vp.configuration.title" = "Pictures";
+
+/* Class = "UIButton"; normalTitle = "Button"; ObjectID = "qyk-b9-9vp"; */
+"qyk-b9-9vp.normalTitle" = "Button";
+
+/* Class = "UILabel"; text = "Existing Program"; ObjectID = "rv8-K5-axZ"; */
+"rv8-K5-axZ.text" = "Existing Program";
+
+/* Class = "UIButton"; configuration.title = "Current Subscriptions"; ObjectID = "tH0-3u-vJI"; */
+"tH0-3u-vJI.configuration.title" = "Current Subscriptions";
+
+/* Class = "UIButton"; normalTitle = "Button"; ObjectID = "tH0-3u-vJI"; */
+"tH0-3u-vJI.normalTitle" = "Button";
+
+/* Class = "UILabel"; text = "5/5/2010"; ObjectID = "ucF-92-GzD"; */
+"ucF-92-GzD.text" = "5/5/2010";
+
+/* Class = "UILabel"; text = "Football"; ObjectID = "ugC-wk-SpS"; */
+"ugC-wk-SpS.text" = "Football";
+
+/* Class = "UILabel"; text = "Full Name"; ObjectID = "vz6-B8-6wI"; */
+"vz6-B8-6wI.text" = "Full Name";
+
+/* Class = "UIButton"; normalTitle = "Button"; ObjectID = "xLA-Ci-Faz"; */
+"xLA-Ci-Faz.normalTitle" = "Button";
+
+/* Class = "UILabel"; text = "Yes"; ObjectID = "xO2-gP-vNI"; */
+"xO2-gP-vNI.text" = "Yes";
+
+/* Class = "UILabel"; text = "Add a personal image"; ObjectID = "z25-WG-yab"; */
+"z25-WG-yab.text" = "Add a personal image";
