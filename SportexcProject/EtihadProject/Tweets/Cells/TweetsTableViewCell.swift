@@ -12,8 +12,11 @@ class TweetsTableViewCell: UITableViewCell {
     @IBOutlet weak var tweetTitle: UILabel!
     @IBOutlet weak var tweetDesc: UILabel!
     @IBOutlet weak var tweetConclusion: UILabel!
-    
-    @IBOutlet weak var showMoreBtn: UIButton!
+    @IBOutlet weak var showMoreBtn: UIButton!{
+        didSet{
+            showMoreBtn.setTitle(NSLocalizedString("ReadMore", comment: ""), for: .normal)
+        }
+    }
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code

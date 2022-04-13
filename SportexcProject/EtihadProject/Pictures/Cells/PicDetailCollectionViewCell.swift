@@ -9,5 +9,4 @@ import UIKit
 
 class PicDetailCollectionViewCell: UICollectionViewCell {
     @IBOutlet weak var picImg: UIImageView!
-    
 }
