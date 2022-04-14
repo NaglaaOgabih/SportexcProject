@@ -6,8 +6,9 @@
 //
 
 import UIKit
+import SwiftUI
 
-extension PicDetailViewController : UICollectionViewDelegate, UICollectionViewDataSource{
+extension PicDetailViewController : UICollectionViewDelegate, UICollectionViewDataSource,UICollectionViewDelegateFlowLayout{
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return album.count
     }
@@ -18,18 +19,22 @@ extension PicDetailViewController : UICollectionViewDelegate, UICollectionViewDa
         cell.picImg.kf.setImage(with: url)
         return cell
     }
-    
-    private func collectionView(collectionView: UICollectionView, didSelectItemAtIndexPath indexPath: NSIndexPath) {
-        self.performSegue(withIdentifier: "imageDetail", sender: indexPath)
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize
+    {
+        return CGSize(width: collectionView.bounds.size.width/3.0 - 10, height: 120)
     }
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if let destination = segue.destination as? PicDetailViewController{
-            let cell = sender as! PicDetailCollectionViewCell
-            let indexPaths = self.imagesCollectionView.indexPath(for: cell)
-                destination.id = album[indexPaths!.row].id
-
-
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        performSegue(withIdentifier: "imageShow", sender: indexPath )
+//        performSegue(withIdentifier: "imageShow", sender: self )
+    }
+     func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?)
+    {
+        if segue.identifier == "imageShow"
+        {
+            let indexPath : NSIndexPath = sender as! NSIndexPath
+            let vc = segue.destination as! ShowPicViewController
+            vc.showImageLink = self.album[indexPath.row].image
+//            print(vc.showImageLink)
         }
     }
-    
 }

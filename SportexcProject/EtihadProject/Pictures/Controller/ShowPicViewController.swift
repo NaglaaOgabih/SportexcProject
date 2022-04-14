@@ -6,16 +6,20 @@
 //
 
 import UIKit
+import Kingfisher
 
 class ShowPicViewController: UIViewController {
-
+    var showImageLink : String?
     @IBOutlet weak var image: UIImageView!
     override func viewDidLoad() {
         super.viewDidLoad()
+        print(showImageLink)
+//        let url = URL(string: showImageLink)
+//        image.kf.setImage(with: url)
 
-        // Do any additional setup after loading the view.
-    }
-    
+}
     @IBAction func closeBtnPressed(_ sender: Any) {
+        dismiss(animated: true, completion: nil)
+
     }
 }

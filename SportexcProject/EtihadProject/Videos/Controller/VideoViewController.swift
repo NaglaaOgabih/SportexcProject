@@ -6,39 +6,33 @@
 //
 
 import UIKit
-
+import Alamofire
 class VideoViewController: UIViewController {
-
+    @IBOutlet weak var videosTableView: UITableView!
+    var videosArray : [Video]?
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        videosApi()
         // Do any additional setup after loading the view.
     }
-    @IBAction func newsBtnPressed(_ sender: Any) {
-        let storyboard = UIStoryboard(name: "Main", bundle: nil)
-        let vc = storyboard.instantiateViewController(withIdentifier: "MediaCenterViewController") as! NewsViewController
-         navigationController?.pushViewController(vc,
-         animated: true)
-
+    func videosApi(){
+        let decoder = JSONDecoder()
+        let params:[String:Any] = ["lang":"en"]
+        let headers: HTTPHeaders = [:]
+        Request.req(url:"https://etihad.emcan-group.com/api/videos?lang=en", headers: headers, params: params, meth: .get) { [self](data, error) in
+            if let error = error {
+                print(error.localizedDescription)
+            }
+            if let data = data {
+                do {
+                    let videosDecoded = try decoder.decode(VideosModel.self, from: data)
+                    videosArray = videosDecoded.payload
+                    videosTableView.reloadData()
+                    
+                } catch{
+                    print(error.localizedDescription)
+                }
+            }
+        }
     }
-    
-    @IBAction func picturesBtnPressed(_ sender: Any) {
-        let storyboard = UIStoryboard(name: "Main", bundle: nil)
-        let vc = storyboard.instantiateViewController(withIdentifier: "PicturesViewController") as! PicturesViewController
-         navigationController?.pushViewController(vc,
-         animated: true)
-    }
-    @IBAction func videoBtnPressed(_ sender: UIButton) {
-        let storyboard = UIStoryboard(name: "Main", bundle: nil)
-        let vc = storyboard.instantiateViewController(withIdentifier: "VideoViewController") as! VideoViewController
-         navigationController?.pushViewController(vc,
-         animated: true)
-    }
-    @IBAction func tweetsBtnPressed(_ sender: Any) {
-        let storyboard = UIStoryboard(name: "Main", bundle: nil)
-        let vc = storyboard.instantiateViewController(withIdentifier: "TweetsViewController") as! TweetsViewController
-         navigationController?.pushViewController(vc,
-         animated: true)
-    }
-
 }
