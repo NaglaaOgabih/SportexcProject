@@ -1120,7 +1120,6 @@
                     <navigationItem key="navigationItem" id="vuk-U2-UnD"/>
                     <connections>
                         <outlet property="imagesCollectionView" destination="ehl-yS-6Hr" id="TaE-vl-R9o"/>
-                        <segue destination="kGN-Gz-7Xm" kind="presentation" identifier="imageShow" modalPresentationStyle="fullScreen" id="I7V-OE-kYH"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="7rA-O6-QYm" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -1130,43 +1129,34 @@
         <!--Show Pic View Controller-->
         <scene sceneID="5nh-SG-30S">
             <objects>
-                <viewController id="kGN-Gz-7Xm" customClass="ShowPicViewController" customModule="SportexcProject" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="ShowPicViewController" id="kGN-Gz-7Xm" customClass="ShowPicViewController" customModule="SportexcProject" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="udu-KV-kt9">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="709.5"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="IqD-b9-Ks8">
-                                <rect key="frame" x="40" y="204" width="334" height="346"/>
+                                <rect key="frame" x="40" y="280" width="334" height="346"/>
                                 <subviews>
-                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="dot-circle" translatesAutoresizingMaskIntoConstraints="NO" id="0lM-sR-tGD">
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="0lM-sR-tGD">
                                         <rect key="frame" x="0.0" y="0.0" width="334" height="346"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="334" id="4Kc-nW-Zgq"/>
+                                            <constraint firstAttribute="height" constant="346" id="md5-jH-B80"/>
+                                        </constraints>
                                     </imageView>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kre-rd-biI">
-                                        <rect key="frame" x="0.0" y="8" width="62" height="52"/>
-                                        <state key="normal" title="Button"/>
-                                        <buttonConfiguration key="configuration" style="plain" image="close"/>
-                                        <connections>
-                                            <action selector="closeBtnPressed:" destination="kGN-Gz-7Xm" eventType="touchUpInside" id="ScN-8h-f4c"/>
-                                        </connections>
-                                    </button>
                                 </subviews>
                                 <constraints>
-                                    <constraint firstItem="0lM-sR-tGD" firstAttribute="leading" secondItem="IqD-b9-Ks8" secondAttribute="leading" id="3zn-Dt-U0N"/>
                                     <constraint firstAttribute="height" constant="346" id="7ZZ-Ql-xYr"/>
-                                    <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="kre-rd-biI" secondAttribute="trailing" constant="20" symbolic="YES" id="DIi-sE-ekF"/>
-                                    <constraint firstAttribute="trailing" secondItem="0lM-sR-tGD" secondAttribute="trailing" id="FaD-X6-Nsk"/>
-                                    <constraint firstAttribute="bottom" secondItem="0lM-sR-tGD" secondAttribute="bottom" id="KGu-mm-nlV"/>
-                                    <constraint firstItem="kre-rd-biI" firstAttribute="top" secondItem="IqD-b9-Ks8" secondAttribute="top" constant="8" id="QkT-sP-RTU"/>
-                                    <constraint firstItem="0lM-sR-tGD" firstAttribute="top" secondItem="IqD-b9-Ks8" secondAttribute="top" id="RQa-Zq-mi8"/>
-                                    <constraint firstItem="kre-rd-biI" firstAttribute="leading" secondItem="IqD-b9-Ks8" secondAttribute="leading" id="bRA-Cp-FRy"/>
                                     <constraint firstAttribute="width" constant="334" id="sZs-bb-OrY"/>
                                 </constraints>
                             </view>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="oET-43-qgY"/>
-                        <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
+                            <constraint firstItem="0lM-sR-tGD" firstAttribute="centerX" secondItem="oET-43-qgY" secondAttribute="centerX" id="PVc-BH-4pS"/>
                             <constraint firstItem="IqD-b9-Ks8" firstAttribute="centerX" secondItem="oET-43-qgY" secondAttribute="centerX" id="gbk-aR-rBH"/>
+                            <constraint firstItem="0lM-sR-tGD" firstAttribute="centerY" secondItem="oET-43-qgY" secondAttribute="centerY" id="oOv-kx-1ui"/>
                             <constraint firstItem="IqD-b9-Ks8" firstAttribute="centerY" secondItem="oET-43-qgY" secondAttribute="centerY" id="rRe-eS-gkI"/>
                         </constraints>
                     </view>
@@ -1517,7 +1507,7 @@
                                             <rect key="frame" x="0.0" y="0.0" width="414" height="152"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="pvw-9R-oI5">
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="profilePic" translatesAutoresizingMaskIntoConstraints="NO" id="pvw-9R-oI5">
                                                     <rect key="frame" x="319" y="13" width="75" height="75"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" constant="75" id="Kd2-af-f9l"/>
@@ -1527,7 +1517,7 @@
                                                 <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="1" translatesAutoresizingMaskIntoConstraints="NO" id="Yc9-40-3fl">
                                                     <rect key="frame" x="20" y="17" width="284" height="90"/>
                                                     <subviews>
-                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text=";" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="66J-y9-DKw">
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="66J-y9-DKw">
                                                             <rect key="frame" x="0.0" y="0.0" width="284" height="22"/>
                                                             <constraints>
                                                                 <constraint firstAttribute="height" constant="22" id="Vy8-ZX-Kxp"/>
@@ -1615,7 +1605,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="S7v-ZR-yzF" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="8763.7681159420299" y="4167.8571428571431"/>
+            <point key="canvasLocation" x="8643" y="3647"/>
         </scene>
         <!--News View Controller-->
         <scene sceneID="od5-3p-XOy">
@@ -1649,7 +1639,7 @@
                                                         <stackView opaque="NO" contentMode="scaleToFill" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="Yw7-yK-6uL">
                                                             <rect key="frame" x="0.0" y="0.0" width="252" height="38.5"/>
                                                             <subviews>
-                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Basketball team meeting" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ScE-bO-xOV">
+                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Basketball team meeting" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ScE-bO-xOV">
                                                                     <rect key="frame" x="0.0" y="0.0" width="151" height="38.5"/>
                                                                     <fontDescription key="fontDescription" type="boldSystem" pointSize="16"/>
                                                                     <color key="textColor" red="0.37747356300000001" green="0.18315151330000001" blue="0.52943927049999995" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
@@ -1828,7 +1818,6 @@
         <image name="Group 1020" width="57" height="57"/>
         <image name="ImgIcons" width="39.5" height="39.5"/>
         <image name="circle" width="16" height="15"/>
-        <image name="close" width="38" height="38"/>
         <image name="dot-circle" width="16" height="15"/>
         <image name="iconButton" width="57" height="57"/>
         <image name="navbarPic" width="428.5" height="147.5"/>

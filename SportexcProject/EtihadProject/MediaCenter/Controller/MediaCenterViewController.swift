@@ -91,9 +91,12 @@ class MediaCenterViewController: UIViewController {
     }
     func tabsApi(){
         let decoder = JSONDecoder()
-        let params:[String:Any] = ["lang":"en"]
+        var lang = Locale.current.languageCode!
+        let params:[String:Any] = ["lang": lang]
         let headers: HTTPHeaders = [:]
-        Request.req(url:"https://etihad.emcan-group.com/api/mediaCenter?lang=en", headers: headers, params: params, meth: .get) { [self](data, error) in
+        print(lang)
+
+        Request.req(url:"https://etihad.emcan-group.com/api/mediaCenter?lang=\(lang)", headers: headers, params: params, meth: .get) { [self](data, error) in
             if let error = error {
                 print(error.localizedDescription)
             }
@@ -104,8 +107,10 @@ class MediaCenterViewController: UIViewController {
                     for i in tabsDecoded.payload ?? []{
                         pagesSegmentControl.setTitle(NSLocalizedString(i.title ?? "", comment: ""), forSegmentAt: counter)
                         counter += 1
+                        print(lang)
                     }
                 } catch{
+                    print(lang)
                     print(error.localizedDescription)
                 }
             }

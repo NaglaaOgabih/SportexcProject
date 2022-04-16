@@ -13,9 +13,8 @@ class ShowPicViewController: UIViewController {
     @IBOutlet weak var image: UIImageView!
     override func viewDidLoad() {
         super.viewDidLoad()
-        print(showImageLink)
-//        let url = URL(string: showImageLink)
-//        image.kf.setImage(with: url)
+        let url = URL(string: showImageLink ?? "")
+        image.kf.setImage(with: url)
 
 }
     @IBAction func closeBtnPressed(_ sender: Any) {

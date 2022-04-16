@@ -6,7 +6,6 @@
 //
 
 import UIKit
-import SwiftUI
 
 extension PicDetailViewController : UICollectionViewDelegate, UICollectionViewDataSource,UICollectionViewDelegateFlowLayout{
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
@@ -24,17 +23,9 @@ extension PicDetailViewController : UICollectionViewDelegate, UICollectionViewDa
         return CGSize(width: collectionView.bounds.size.width/3.0 - 10, height: 120)
     }
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        performSegue(withIdentifier: "imageShow", sender: indexPath )
-//        performSegue(withIdentifier: "imageShow", sender: self )
-    }
-     func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?)
-    {
-        if segue.identifier == "imageShow"
-        {
-            let indexPath : NSIndexPath = sender as! NSIndexPath
-            let vc = segue.destination as! ShowPicViewController
-            vc.showImageLink = self.album[indexPath.row].image
-//            print(vc.showImageLink)
-        }
+        
+        let vc = UIStoryboard.init(name: "Main", bundle: Bundle.main).instantiateViewController(withIdentifier: "ShowPicViewController") as? ShowPicViewController
+        vc?.showImageLink = album[indexPath.item].image
+        self.navigationController?.pushViewController(vc!, animated: true)
     }
 }

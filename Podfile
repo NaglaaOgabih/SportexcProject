@@ -8,6 +8,7 @@ target 'SportexcProject' do
   # Pods for SportexcProject
   pod 'Alamofire'
   pod 'Kingfisher', '~> 7.0'
+	pod 'Localize-Swift', '~> 3.2'
 
   target 'SportexcProjectTests' do
     inherit! :search_paths

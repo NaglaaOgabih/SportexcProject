@@ -102,7 +102,7 @@ class SubscriptionViewController: UIViewController {
     }
     func cstatusApi(){
         let decoder = JSONDecoder()
-        let params:[String:Any] = ["lang":"en"]
+        let params:[String:Any] = ["lang": Locale.current.languageCode!]
         let headers: HTTPHeaders = [:]
         Request.req(url:"https://sportexcbh.com/api/get_status.php", headers: headers, params: params, meth: .post) { [self](data, error) in
             if let error = error {
@@ -131,7 +131,7 @@ class SubscriptionViewController: UIViewController {
         let decoder = JSONDecoder()
         let params:[String:Any] = [
             "client_id": "1",
-            "lang": "en"
+            "lang": Locale.current.languageCode
         ]
         let headers: HTTPHeaders = [:]
         Request.req(url:"https://sportexcbh.com/api/get_child_with_subscription_current.php", headers: headers, params: params, meth: .post) { (data, error) in
@@ -155,7 +155,7 @@ class SubscriptionViewController: UIViewController {
         let decoder = JSONDecoder()
         let params:[String:Any] = [
             "client_id": "1",
-            "lang": "en"
+            "lang": Locale.current.languageCode
         ]
         let headers: HTTPHeaders = [:]
         Request.req(url:"https://sportexcbh.com/api/get_child_with_subscription_last.php", headers: headers, params: params, meth: .post) { (data, error) in

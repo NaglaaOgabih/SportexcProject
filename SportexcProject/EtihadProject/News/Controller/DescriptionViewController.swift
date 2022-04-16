@@ -24,9 +24,11 @@ class DescriptionViewController: UIViewController {
     
     func newsDetailsApi(){
         let decoder = JSONDecoder()
-        let params:[String:Any] = ["lang":"en" , "id": newsId ]
+        let lang = Locale.current.languageCode!
+
+        let params:[String:Any] = ["lang": lang , "id": newsId ]
         let headers: HTTPHeaders = [:]
-        Request.req(url:"https://etihad.emcan-group.com/api/news?lang=en&id=\(newsId)", headers: headers, params: params, meth: .get) { [self](data, error) in
+        Request.req(url:"https://etihad.emcan-group.com/api/news?lang=\(lang)&id=\(newsId)", headers: headers, params: params, meth: .get) { [self](data, error) in
             if let error = error {
                 print(error.localizedDescription)
             }
